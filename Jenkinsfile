@@ -8,10 +8,10 @@ pipeline {
                 git 'https://github.com/2206-devops-batch/flask-demo.git'
 
                 // Run venv
-                sh "python -m venv .venv"
+                sh "python3 -m venv .venv"
 
                 // Run pip install
-                sh "pip install -r requirements-dev.txt"
+                sh "pip3 install -r requirements-dev.txt"
                 
                 // Run pytest
                 sh "pytest app-test.py"
